@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web/screens/about_screen.dart';
+import 'package:flutter_web/screens/contact_screen.dart';
 import 'package:flutter_web/screens/home_screen.dart';
 import 'package:flutter_web/screens/my_services_screen.dart';
 import 'package:flutter_web/screens/my_work_screen.dart';
 import 'package:flutter_web/widgets/nav_bar_item_widget.dart';
-import 'package:glassmorphism/glassmorphism.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -65,9 +65,14 @@ class _MainPageState extends State<MainPage> {
       child: CarouselWithIndicatorDemo(),
     ),
     Container(
-        height:double.infinity,
-        margin: const EdgeInsets.all(10),
-        color:Colors.yellowAccent
+      height:double.infinity,
+      margin: const EdgeInsets.all(10),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(15),
+        color: Colors.white,
+
+      ),
+      child: const ContactScreen(),
     ),
   ];
 

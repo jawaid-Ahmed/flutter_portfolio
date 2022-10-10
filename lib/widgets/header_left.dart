@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_web/widgets/social_btn_widget.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HeaderLeft extends StatefulWidget {
   const HeaderLeft({Key? key}) : super(key: key);
@@ -72,19 +73,25 @@ class _HeaderLeftState extends State<HeaderLeft> with TickerProviderStateMixin{
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Hey There!',style: TextStyle(fontSize: 35,color: Colors.white),),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text('Hey There!',style: GoogleFonts.akayaTelivigala(
+                            textStyle: const TextStyle(fontSize: 35,color: Colors.white),
+                          )),
                         ),
-                        const Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text("I'm Jawaid Ali",style: TextStyle(fontSize: 42,color: Colors.orange,fontWeight: FontWeight.bold),),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text("I'm Jawaid Ali",style: GoogleFonts.akayaTelivigala(
+                            textStyle: const TextStyle(fontSize: 42,color: Colors.orange,fontWeight: FontWeight.bold),
+                          )),
                         ),
                          Padding(
                            padding: const EdgeInsets.all(8.0),
                            child: Text('Professional Mobile App Developer I Will Transform \nYour Thoughts To Beautiful Mobile Apps I Design \n'
                               'and Develope Mobile Apps for Ios and Android',
-                            style: TextStyle(fontSize: 12,color: Colors.grey.shade200),),
+                            style: GoogleFonts.akayaTelivigala(
+                              textStyle: TextStyle(fontSize: 12,color: Colors.grey.shade200),
+                            )),
                          ),
 
                         Container(
@@ -94,7 +101,9 @@ class _HeaderLeftState extends State<HeaderLeft> with TickerProviderStateMixin{
                               borderRadius: BorderRadius.circular(25),
                               color: Colors.orange
                           ),
-                          child: const Text("Download Cv",style: TextStyle(fontSize: 24,color: Colors.white,fontWeight: FontWeight.bold),),
+                          child:  Text("Download Cv",style: GoogleFonts.akayaTelivigala(
+                            textStyle: const TextStyle(fontSize: 24,color: Colors.white,fontWeight: FontWeight.bold),
+                          )),
                         ),
 
                       ],),
@@ -113,7 +122,7 @@ class _HeaderLeftState extends State<HeaderLeft> with TickerProviderStateMixin{
                         ),
                       ),
                       Transform.translate(
-                        offset: Offset.fromDirection(getRadiansFromDegree(270),degOneTranslationAnimation.value * 100),
+                        offset: Offset.fromDirection(getRadiansFromDegree(300),degOneTranslationAnimation.value * 100),
                         child: Transform(
                           transform: Matrix4.rotationZ(getRadiansFromDegree(rotationAnimation.value))..scale(degOneTranslationAnimation.value),
                           alignment: Alignment.center,
@@ -129,7 +138,23 @@ class _HeaderLeftState extends State<HeaderLeft> with TickerProviderStateMixin{
                         ),
                       ),
                       Transform.translate(
-                        offset: Offset.fromDirection(getRadiansFromDegree(225),degTwoTranslationAnimation.value * 100),
+                        offset: Offset.fromDirection(getRadiansFromDegree(250),degOneTranslationAnimation.value * 100),
+                        child: Transform(
+                          transform: Matrix4.rotationZ(getRadiansFromDegree(rotationAnimation.value))..scale(degOneTranslationAnimation.value),
+                          alignment: Alignment.center,
+                          child: SocialButton(
+                            color: Colors.transparent,
+                            width: 50,
+                            height: 50,
+                            icon: 'assets/icons/instagram.png',
+                            onClick: (){
+                              print('First Button');
+                            },
+                          ),
+                        ),
+                      ),
+                      Transform.translate(
+                        offset: Offset.fromDirection(getRadiansFromDegree(205),degTwoTranslationAnimation.value * 100),
                         child: Transform(
                           transform: Matrix4.rotationZ(getRadiansFromDegree(rotationAnimation.value))..scale(degTwoTranslationAnimation.value),
                           alignment: Alignment.center,
@@ -145,7 +170,7 @@ class _HeaderLeftState extends State<HeaderLeft> with TickerProviderStateMixin{
                         ),
                       ),
                       Transform.translate(
-                        offset: Offset.fromDirection(getRadiansFromDegree(180),degThreeTranslationAnimation.value * 100),
+                        offset: Offset.fromDirection(getRadiansFromDegree(160),degThreeTranslationAnimation.value * 100),
                         child: Transform(
                           transform: Matrix4.rotationZ(getRadiansFromDegree(rotationAnimation.value))..scale(degThreeTranslationAnimation.value),
                           alignment: Alignment.center,

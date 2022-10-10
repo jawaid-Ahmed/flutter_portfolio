@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web/models/service_obj.dart';
 import 'package:flutter_web/widgets/service_container_widget.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class MyServicesScreen extends StatefulWidget {
   const MyServicesScreen({Key? key}) : super(key: key);
@@ -42,11 +43,17 @@ class _MyServicesScreenState extends State<MyServicesScreen> {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                const Text('My Awesome',style: TextStyle(color: Colors.black,fontSize: 21,fontWeight: FontWeight.bold),),
-                const Text('Services',style: TextStyle(color: Colors.orange,fontSize: 32,fontWeight: FontWeight.bold),),
-                const Text('Professional Mobile App Developer I Will Transform \nYour Thoughts To Beautiful Mobile Apps I Design \n'
+                  Text('My Awesome',style: GoogleFonts.akayaTelivigala(
+                  textStyle: const TextStyle(color: Colors.black,fontSize: 21,fontWeight: FontWeight.bold),
+                )),
+                Text('Services',style: GoogleFonts.akayaTelivigala(
+                  textStyle: const TextStyle(color: Colors.orange,fontSize: 32,fontWeight: FontWeight.bold),
+                )),
+                Text('Professional Mobile App Developer I Will Transform \nYour Thoughts To Beautiful Mobile Apps I Design \n'
                     'and Develope Mobile Apps for Ios and Android',
-                  style: TextStyle(fontSize: 12,color: Colors.grey),),
+                  style: GoogleFonts.akayaTelivigala(
+                    textStyle: const TextStyle(fontSize: 12,color: Colors.grey),
+                  )),
 
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 30,vertical: 10),
@@ -55,7 +62,9 @@ class _MyServicesScreenState extends State<MyServicesScreen> {
                       borderRadius: BorderRadius.circular(25),
                       color: Colors.orange
                   ),
-                  child: const Text("Hire Me",style: TextStyle(fontSize: 24,color: Colors.white,fontWeight: FontWeight.bold),),
+                  child: Text("Hire Me",style: GoogleFonts.akayaTelivigala(
+                    textStyle: const TextStyle(fontSize: 24,color: Colors.white,fontWeight: FontWeight.bold),
+                  )),
                 ),
               ],),
 

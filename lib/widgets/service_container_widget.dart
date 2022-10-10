@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web/models/service_obj.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ServiceContainer extends StatelessWidget {
   final ServiceObj service;
@@ -30,10 +31,14 @@ class ServiceContainer extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
           Image(image: AssetImage(service.iconPath),height: 50,width: 50,fit: BoxFit.cover,),
-          Text(service.title,style: const TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 22),),
+          Text(service.title,style: GoogleFonts.akayaTelivigala(
+            textStyle: const TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 22),
+          )),
           Wrap(
             children: [
-              Text(service.description,style: const TextStyle(color: Colors.grey,fontWeight: FontWeight.w200,fontSize: 12),
+              Text(service.description,style: GoogleFonts.akayaTelivigala(
+                textStyle: const TextStyle(color: Colors.grey,fontWeight: FontWeight.w200,fontSize: 12),
+              ),
               textAlign: TextAlign.center,overflow: TextOverflow.ellipsis,maxLines: 3,),
             ],
           )
