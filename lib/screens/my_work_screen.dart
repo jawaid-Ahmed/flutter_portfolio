@@ -38,7 +38,7 @@ final List<Widget> imageSliders = imgList
                     vertical: 10.0, horizontal: 20.0),
                 child: Text(
                   'No. ${imgList.indexOf(item)} image',
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Colors.white,
                     fontSize: 20.0,
                     fontWeight: FontWeight.bold,
@@ -53,6 +53,11 @@ final List<Widget> imageSliders = imgList
     .toList();
 
 class CarouselWithIndicatorDemo extends StatefulWidget {
+
+  final List<Map> items;
+  final int index;
+  const CarouselWithIndicatorDemo({Key? key,required this.items,required this.index}) : super(key: key);
+
   @override
   State<StatefulWidget> createState() {
     return _CarouselWithIndicatorState();

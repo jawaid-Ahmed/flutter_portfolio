@@ -4,6 +4,7 @@ import 'package:flutter_web/screens/contact_screen.dart';
 import 'package:flutter_web/screens/home_screen.dart';
 import 'package:flutter_web/screens/my_services_screen.dart';
 import 'package:flutter_web/screens/my_work_screen.dart';
+import 'package:flutter_web/screens/work_grid_screen.dart';
 import 'package:flutter_web/widgets/nav_bar_item_widget.dart';
 
 void main() {
@@ -62,14 +63,16 @@ class _MainPageState extends State<MainPage> {
         color: Colors.white,
 
       ),
-      child: CarouselWithIndicatorDemo(),
+      child: const WorkGridScreen(),
     ),
     Container(
       height:double.infinity,
       margin: const EdgeInsets.all(10),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),
-        color: Colors.white,
+        image:const DecorationImage(
+          fit: BoxFit.cover,
+          image: NetworkImage('https://i0.wp.com/www.techjunkie.com/wp-content/uploads/2019/07/How-to-Add-Pictures-to-Contacts-on-Your-Android-Device.jpg?fit=1000%2C666&ssl=1'),)
 
       ),
       child: const ContactScreen(),

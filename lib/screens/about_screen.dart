@@ -17,7 +17,7 @@ class _AboutScreenState extends State<AboutScreen> {
         Padding(
           padding: EdgeInsets.all(8.0),
           child: Text("About Me",style: GoogleFonts.akayaTelivigala(
-            textStyle: TextStyle(fontSize: 42,color: Colors.black,fontWeight: FontWeight.bold),
+            textStyle: const TextStyle(fontSize: 42,color: Colors.black,fontWeight: FontWeight.bold),
           )),
         ),
         Padding(
