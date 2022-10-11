@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'dart:js' as js;
 
 class AboutScreen extends StatefulWidget {
   const AboutScreen({Key? key}) : super(key: key);
@@ -50,11 +51,36 @@ class _AboutScreenState extends State<AboutScreen> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      IconButton(onPressed: (){}, icon: const Image(image: AssetImage('assets/icons/gmail.png'),)),
-                      IconButton(onPressed: (){}, icon: const Image(image: AssetImage('assets/icons/github.png'),)),
-                      IconButton(onPressed: (){}, icon: const Image(image: AssetImage('assets/icons/facebook.png'),)),
-                      IconButton(onPressed: (){}, icon: const Image(image: AssetImage('assets/icons/instagram.png'),)),
-                      IconButton(onPressed: (){}, icon: const Image(image: AssetImage('assets/icons/whatsapp.png'),)),
+                      const Tooltip(
+                        message: 'jkahmed78@gmail.com',
+                        triggerMode: TooltipTriggerMode.tap,
+                        child: Image(image: AssetImage('assets/icons/gmail.png'),height: 24,width: 24,)
+                      ),
+                      IconButton(onPressed: (){
+                        js.context.callMethod('open', ['https://github.com/jawaid-Ahmed']);
+
+                      }, icon: const Image(image: AssetImage('assets/icons/github.png'),)),
+                      IconButton(onPressed: (){
+                        js.context.callMethod('open', ['https://www.linkedin.com/in/jawaid-ali-mangi-6a241716a']);
+
+                      }, icon: const Image(image: AssetImage('assets/icons/linkedin.png'),)),
+                      IconButton(onPressed: (){
+                        js.context.callMethod('open', ['https://www.facebook.com/javed.mangi.754']);
+
+                      }, icon: const Image(image: AssetImage('assets/icons/facebook.png'),)),
+                      IconButton(onPressed: (){
+                        js.context.callMethod('open', ['https://www.instagram.com/jawaid_ali_78/']);
+
+                      }, icon: const Image(image: AssetImage('assets/icons/instagram.png'),)),
+                      const Tooltip(
+                          message: '+923023330817',
+                          triggerMode: TooltipTriggerMode.tap,
+                          child: Image(image: AssetImage('assets/icons/whatsapp.png'),height: 24,width: 24,)
+                      ),
+                      IconButton(onPressed: (){
+                        js.context.callMethod('open', ['https://twitter.com/Jawaid_Official?s=08']);
+
+                      }, icon: const Image(image: AssetImage('assets/icons/twitter.png'),)),
                     ],),
                 )
             ],),

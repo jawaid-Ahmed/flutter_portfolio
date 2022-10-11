@@ -23,9 +23,10 @@ class SocialButton extends StatelessWidget {
       decoration: BoxDecoration(color: color,shape: BoxShape.circle),
       width: width,
       height: height,
-      child: IconButton(icon: Image.asset(icon,height: 50,width: 50,),enableFeedback: true, onPressed: () {
+      child: FloatingActionButton(backgroundColor:Colors.transparent ,enableFeedback: true, onPressed: () {
         onClick.call();
-      }),
+
+      }, child: Image.asset(icon,height: 50,width: 50,)),
     );
   }
 }
